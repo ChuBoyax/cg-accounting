@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CG Accounting Corporation | Accountant in Fort Lauderdale, FL since 1991</title>
+<meta name="description" content="CG Accounting Corporation, Fort Lauderdale, Florida. Established 1991. Tax preparation for individuals and businesses, audit representation, QuickBooks, business consulting and more. English, Hebrew, Spanish, French and Yiddish spoken.">
+<meta name="keywords" content="accountant Fort Lauderdale, tax preparation Fort Lauderdale FL, audit representation Florida, QuickBooks setup Fort Lauderdale, Hebrew speaking accountant Florida, contador Fort Lauderdale">
+<meta property="og:title" content="CG Accounting Corporation">
+<meta property="og:description" content="Small firm attention, with the capabilities of the Big Four through our partnerships. Fort Lauderdale, since 1991.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1F3EE; --card:#FFFFFF; --sand:#E7E1D3; --ink:#12302F; --muted:#4B5D5B;
+  --sea:#2E7D74; --sea-ink:#1F5E57; --sun:#E2A93B; --deep:#0E2726; --on-deep:#EEF2EE;
+  --line:rgba(18,48,47,.16); --shadow:0 20px 44px -26px rgba(14,39,38,.45);
+  --serif:"Frank Ruhl Libre", "Times New Roman", Georgia, serif;
+  --sans:"Rubik", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  --r-lg:28px; --r-md:18px; --max:1180px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0D1C1C; --card:#132A29; --sand:#1B3533; --ink:#E6EEEC; --muted:#A6B9B6;
+    --sea:#5CB3A8; --sea-ink:#7CCABF; --sun:#E8B54E; --deep:#081514; --on-deep:#EEF2EE;
+    --line:rgba(230,238,236,.15); --shadow:0 20px 44px -26px rgba(0,0,0,.75);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0D1C1C; --card:#132A29; --sand:#1B3533; --ink:#E6EEEC; --muted:#A6B9B6;
+  --sea:#5CB3A8; --sea-ink:#7CCABF; --sun:#E8B54E; --deep:#081514; --on-deep:#EEF2EE;
+  --line:rgba(230,238,236,.15); --shadow:0 20px 44px -26px rgba(0,0,0,.75);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 90px)}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17.5px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:8px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(20px,4vw,40px)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;margin:0}
+h2{font-size:clamp(2.1rem,4.4vw,3.4rem)}
+h3{font-size:1.45rem}
+p{margin:0 0 1em;max-width:62ch}
+.ph{color:var(--muted);font-style:italic}
+section{padding:clamp(72px,10vw,120px) 0}
+.lede{font-size:1.15rem;color:var(--muted)}
+.kicker{display:block;font-size:1rem;font-weight:500;color:var(--sea-ink);margin-bottom:.7rem}
+[dir="rtl"]{unicode-bidi:isolate}
+
+.btn{display:inline-flex;align-items:center;gap:.5em;padding:.85em 1.5em;border-radius:999px;font:500 1rem/1 var(--sans);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--ink);color:var(--paper)}
+.btn-ghost{border-color:var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.btn-sun{background:var(--sun);color:#12302F}
+.btn-sm{padding:.6em 1.1em;font-size:.92rem;background:var(--sand);color:var(--ink)}
+
+/* loader */
+#loader{position:fixed;inset:0;z-index:100;background:var(--paper);display:grid;place-items:center;text-align:center}
+#loader svg{width:96px;height:96px}
+#loader .ring{fill:none;stroke:var(--sea);stroke-width:1.5;stroke-dasharray:290;stroke-dashoffset:290}
+#loader .cg{font-family:var(--serif);font-size:38px;fill:var(--ink);opacity:0}
+#loader .ticks{display:flex;gap:10px;justify-content:center;margin:18px 0 12px}
+#loader .ticks span{width:22px;height:2px;background:var(--sea);opacity:.15}
+#loader .tag{font-size:.95rem;color:var(--muted);opacity:0}
+.no-loader #loader{display:none}
+
+/* top bar & header */
+.topbar{background:var(--deep);color:var(--on-deep);font-size:.88rem;padding:.55rem 0}
+.topbar .wrap{display:flex;flex-wrap:wrap;gap:.3rem 1.6rem;justify-content:center}
+.topbar a{text-decoration:none}
+header.site{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 84%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+header.site .wrap{display:flex;align-items:center;gap:1.5rem;height:76px}
+.brand{display:flex;align-items:center;gap:.65rem;text-decoration:none}
+.mono{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--sea);display:grid;place-items:center;font-family:var(--serif);font-weight:500;font-size:1.05rem;letter-spacing:.02em}
+.brand b{font-family:var(--serif);font-weight:500;font-size:1.35rem;display:block;line-height:1.1}
+.brand small{font-size:.75rem;color:var(--muted)}
+nav.main{margin-left:auto;display:flex;gap:1.5rem}
+nav.main a{text-decoration:none;font-weight:500}
+nav.main a:hover{color:var(--sea-ink)}
+.head-cta{display:flex;align-items:center;gap:1rem}
+.menu-btn{display:none;margin-left:auto;background:none;border:1.5px solid var(--line);border-radius:999px;padding:.5em 1em;font:500 .95rem var(--sans);color:var(--ink)}
+@media (max-width:960px){
+  nav.main{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;background:var(--paper);padding:1rem 1.5rem 1.5rem;border-bottom:1px solid var(--line)}
+  nav.main.open{display:flex}
+  .menu-btn{display:inline-block}
+}
+@media (max-width:540px){.head-cta{display:none}}
+
+/* hero */
+.hero{padding:clamp(48px,7vw,90px) 0 clamp(64px,8vw,100px)}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1{font-size:clamp(2.8rem,6.6vw,5.4rem);line-height:1.02;margin:.2rem 0 1.4rem}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln > span{display:inline-block}
+.word-slot{display:inline-grid;vertical-align:bottom;color:var(--sea-ink)}
+.word-slot span{grid-area:1/1;opacity:0;transition:opacity .6s ease,transform .6s ease;transform:translateY(.25em);white-space:nowrap}
+.word-slot span.on{opacity:1;transform:none}
+.lang-key{font-size:.95rem;color:var(--muted);margin:-.6rem 0 1.4rem;min-height:1.5em}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.6rem 0 1rem}
+.hero .mini{display:flex;flex-wrap:wrap;gap:.6rem}
+.arch{position:relative;aspect-ratio:4/5;margin:0;border-radius:999px 999px var(--r-lg) var(--r-lg);overflow:hidden;background:var(--sand);box-shadow:var(--shadow)}
+.arch .kb{position:absolute;inset:-6%;display:grid;place-items:center;text-align:center;color:var(--muted);padding:2rem;background:radial-gradient(circle at 50% 30%,color-mix(in srgb,var(--sea) 22%,transparent),transparent 60%)}
+.arch figcaption{position:absolute;left:16px;right:16px;bottom:16px;background:var(--card);border-radius:var(--r-md);padding:.9rem 1.1rem;font-size:.92rem;box-shadow:var(--shadow)}
+.arch figcaption b{display:block;font-family:var(--serif);font-size:1.15rem;font-weight:500}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.arch{max-width:380px;width:100%;margin:0 auto}}
+
+/* marquee */
+.strip{border-block:1px solid var(--line);background:var(--sand);overflow:hidden;padding:1.1rem 0}
+.strip .track{display:flex;width:max-content;animation:marq 55s linear infinite}
+.strip ul{display:flex;gap:2.4rem;list-style:none;margin:0;padding:0 1.2rem}
+.strip li{font-family:var(--serif);font-size:1.25rem;white-space:nowrap;display:flex;align-items:center;gap:2.4rem}
+.strip li::after{content:"";width:18px;height:6px;border-top:1.5px solid var(--sea);border-bottom:1.5px solid var(--sea)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* divider: double rule, like a ledger total */
+.divider{display:flex;justify-content:center;padding:0 20px}
+.divider svg{width:min(460px,100%);height:14px}
+.divider path{fill:none;stroke:var(--sea);stroke-width:1.4;stroke-linecap:round}
+
+/* welcome */
+.welcome .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,6vw,90px);align-items:center}
+.circle{aspect-ratio:1;border-radius:50%;background:var(--sand);display:grid;place-items:center;text-align:center;padding:2rem;color:var(--muted);border:1px dashed var(--line)}
+@media (max-width:860px){.welcome .wrap{grid-template-columns:1fr}.circle{max-width:320px;margin:0 auto;width:100%}}
+
+/* story (pinned horizontal) */
+.story{background:var(--deep);color:var(--on-deep);overflow:hidden}
+.story .kicker{color:var(--sun)}
+.story .intro{margin-bottom:2.6rem}
+.tl{display:flex;gap:clamp(18px,2.6vw,30px);width:max-content;position:relative;padding-top:34px}
+.tl::before{content:"";position:absolute;top:8px;left:0;right:0;border-top:1.5px solid rgba(238,242,238,.25)}
+.stop{width:min(76vw,400px);flex:0 0 auto;position:relative}
+.stop::before{content:"";position:absolute;top:-32px;left:0;width:13px;height:13px;border-radius:50%;background:var(--sun)}
+.stop .when{font-family:var(--serif);font-size:clamp(1.9rem,3.2vw,2.6rem);color:var(--sun);line-height:1;margin-bottom:.8rem}
+.stop h3{font-size:1.35rem;margin-bottom:.6rem}
+.stop p{color:rgba(238,242,238,.82);font-size:1rem}
+.static-tl .tl{width:auto;flex-direction:column;padding-top:0;padding-left:30px}
+.static-tl .tl::before{top:0;bottom:0;left:6px;right:auto;border-top:0;border-left:1.5px solid rgba(238,242,238,.25)}
+.static-tl .stop{width:auto}
+.static-tl .stop::before{top:6px;left:-30px}
+
+/* services */
+.toggle{display:inline-flex;position:relative;background:var(--sand);border-radius:999px;padding:5px;margin:1.8rem 0 2rem}
+.toggle button{position:relative;z-index:1;border:0;background:none;padding:.7em 1.5em;border-radius:999px;font:500 1rem var(--sans);color:var(--ink);cursor:pointer}
+.toggle .pill{position:absolute;top:5px;bottom:5px;left:5px;border-radius:999px;background:var(--card);box-shadow:var(--shadow);transition:transform .45s cubic-bezier(.6,.05,.2,1),width .45s}
+.pane[hidden]{display:none}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:26px}
+.svc h3{font-family:var(--sans);font-size:1.12rem;font-weight:600;line-height:1.35}
+.svc p{font-size:.97rem;color:var(--muted);margin:.5rem 0 0}
+.more-h{margin:3.4rem 0 1.4rem;font-size:clamp(1.6rem,3vw,2.2rem)}
+.more{background:transparent;border-style:dashed}
+.network{margin-top:2.2rem;padding:1.4rem 1.6rem;border-radius:var(--r-md);background:var(--sand)}
+
+/* philosophy */
+.philo{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,36px);margin-top:2.4rem}
+.philo div{border-top:1.5px solid var(--ink);padding-top:1.2rem}
+.philo h3{margin-bottom:.6rem}
+.philo p{color:var(--muted);font-size:1rem}
+@media (max-width:860px){.philo{grid-template-columns:1fr}}
+
+/* languages card */
+.langs{background:var(--sun);color:#12302F;border-radius:var(--r-lg);padding:clamp(30px,4vw,52px)}
+.langs h2{font-size:clamp(1.8rem,3.2vw,2.6rem);margin-bottom:1.6rem}
+.langs ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.langs li{background:rgba(255,255,255,.55);border-radius:var(--r-md);padding:1.1rem;text-align:center}
+.langs li b{display:block;font-family:var(--serif);font-weight:500;font-size:1.5rem;line-height:1.2}
+.langs li span{font-size:.88rem}
+@media (max-width:860px){.langs ul{grid-template-columns:repeat(2,1fr)}}
+
+/* team */
+.team .wrap{display:grid;grid-template-columns:minmax(260px,340px) 1fr;gap:clamp(32px,5vw,70px);align-items:start}
+.flip{perspective:1200px;height:470px;cursor:pointer}
+.flip .inner{position:relative;width:100%;height:100%;transition:transform .7s cubic-bezier(.5,.1,.2,1);transform-style:preserve-3d}
+.flip.on .inner{transform:rotateY(180deg)}
+.flip .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:var(--r-lg);background:var(--card);border:1px solid var(--line);padding:24px;display:flex;flex-direction:column}
+.flip .back{transform:rotateY(180deg);overflow:auto}
+.flip .back p{font-size:.95rem}
+.portrait{flex:1;border-radius:999px 999px var(--r-md) var(--r-md);background:var(--sand);display:grid;place-items:center;color:var(--muted);margin-bottom:1rem;text-align:center;padding:1rem}
+.role{color:var(--muted);font-size:.95rem}
+.hint{font-size:.85rem;color:var(--sea-ink);margin-top:.4rem}
+.bio-cols h3{font-family:var(--sans);font-size:1rem;font-weight:600;margin:1.8rem 0 .8rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem}
+.tags span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.4em .9em;font-size:.93rem}
+.aff{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.aff li{background:var(--card);border-radius:var(--r-md);border:1px solid var(--line);padding:.9rem 1rem;font-size:.95rem}
+@media (max-width:860px){.team .wrap{grid-template-columns:1fr}.flip{max-width:360px}.aff{grid-template-columns:1fr}}
+
+/* reviews */
+.reviews-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:1rem}
+.carousel{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2rem 2px 1rem;scrollbar-width:none}
+.carousel::-webkit-scrollbar{display:none}
+.review{flex:0 0 min(84%,420px);scroll-snap-align:start;background:var(--card);border-radius:var(--r-lg);padding:32px;border:1px solid var(--line);margin:0}
+.review p{font-family:var(--serif);font-size:1.3rem;line-height:1.45}
+.car-nav{display:flex;gap:.5rem}
+.car-nav button{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font-size:1.2rem;cursor:pointer}
+
+/* why */
+.why .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,90px)}
+.checks{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.checks li{display:flex;gap:1rem;align-items:center;padding:1rem 0;border-bottom:1px solid var(--line);font-size:1.08rem}
+.checks svg{flex:0 0 26px;width:26px;height:26px}
+.checks circle{fill:var(--sand)}
+.checks path{fill:none;stroke:var(--sea-ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:860px){.why .wrap{grid-template-columns:1fr}}
+
+/* resources */
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.8rem 0}
+.chip{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:.5em 1.1em;font:500 .95rem var(--sans);cursor:pointer}
+.chip[aria-pressed="true"],.chip[aria-checked="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.res-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.res{display:flex;flex-direction:column;justify-content:space-between;gap:1rem;min-height:140px;background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:22px;text-decoration:none;transition:border-color .2s,transform .2s}
+.res:hover{border-color:var(--sea);transform:translateY(-3px)}
+.res .cat{font-size:.82rem;color:var(--sea-ink);font-weight:600}
+.res h3{font-family:var(--sans);font-size:1.08rem;font-weight:600;line-height:1.35}
+.res .go{font-size:.88rem;color:var(--muted)}
+.res[hidden]{display:none}
+
+/* faq */
+.faq .wrap{max-width:860px}
+.acc{border-top:1px solid var(--line);margin-top:2rem}
+.acc-item{border-bottom:1px solid var(--line)}
+.acc-item h3{font-family:var(--sans);font-size:1.1rem;font-weight:600}
+.acc-btn{all:unset;box-sizing:border-box;width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.25rem 0;cursor:pointer}
+.acc-btn:focus-visible{outline:3px solid var(--sun)}
+.acc-btn .ic{flex:0 0 30px;height:30px;border-radius:50%;background:var(--sand);display:grid;place-items:center;transition:transform .3s}
+.acc-btn[aria-expanded="true"] .ic{transform:rotate(45deg)}
+.acc-panel{overflow:hidden;height:0;transition:height .35s ease}
+.acc-panel div{padding:0 0 1.3rem}
+
+/* band */
+.band{background:var(--deep);color:var(--on-deep);text-align:center;border-radius:var(--r-lg);padding:clamp(48px,7vw,90px) 24px}
+.band h2{font-size:clamp(2.2rem,5vw,3.8rem);margin-bottom:1.4rem}
+.band p{margin:1rem auto 0;color:rgba(238,242,238,.75)}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,80px)}
+.contact dl{margin:1.4rem 0 0}
+.contact dt{font-weight:600;margin-top:1rem}
+.contact dd{margin:0;color:var(--muted)}
+.directions{margin-top:2rem;display:grid;gap:12px}
+.directions div{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:1rem 1.2rem;font-size:.97rem}
+.directions b{display:block;font-weight:600;margin-bottom:.2rem}
+form{background:var(--card);border-radius:var(--r-lg);padding:clamp(24px,4vw,40px);border:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:16px;align-self:start}
+form .full{grid-column:1/-1}
+label,.lbl{display:block;font-weight:500;font-size:.95rem;margin-bottom:.35rem}
+input,textarea{width:100%;font:inherit;font-size:1rem;padding:.8em 1em;border-radius:14px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink)}
+textarea{min-height:130px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.form-msg{grid-column:1/-1;font-weight:500;min-height:1.4em;margin:0}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}form{grid-template-columns:1fr}}
+
+/* footer */
+footer{background:var(--deep);color:var(--on-deep);padding:72px 0 calc(28px + env(safe-area-inset-bottom,0px));margin-top:clamp(72px,10vw,120px)}
+footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:36px}
+footer h3{font-family:var(--sans);font-size:.95rem;font-weight:600;margin-bottom:1rem;color:var(--sun)}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin:.45rem 0;font-size:.97rem}
+footer a{text-decoration:none;opacity:.85}
+footer a:hover{opacity:1;text-decoration:underline}
+footer .mono{border-color:var(--sun)}
+footer .brand small{color:rgba(238,242,238,.7)}
+footer .base{margin-top:48px;padding-top:22px;border-top:1px solid rgba(238,242,238,.15);display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;font-size:.9rem;opacity:.8}
+@media (max-width:860px){footer .cols{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){footer .cols{grid-template-columns:1fr}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .strip .track{animation:none}
+}
+</style>
+</head>
+<body>
+
+<div id="loader" role="status" aria-label="Loading">
+  <div>
+    <svg viewBox="0 0 100 100" aria-hidden="true"><circle class="ring" cx="50" cy="50" r="46"/><text class="cg" x="50" y="63" text-anchor="middle">CG</text></svg>
+    <div class="ticks" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <div class="tag">CG Accounting Corporation • Since 1991</div>
+  </div>
+</div>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>3113 Stirling Rd. Suite 102, Fort Lauderdale, FL 33312</span>
+    <a href="tel:+19549649220">Tel (954) 964-9220</a>
+    <a href="mailto:david@cg-accounting.com">david@cg-accounting.com</a>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="CG Accounting Corporation, home">
+      <span class="mono" aria-hidden="true">CG</span>
+      <span><b>CG Accounting</b><small>Corporation • Since 1991</small></span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="mainnav">Menu</button>
+    <nav class="main" id="mainnav" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#team">David Goldis</a>
+      <a href="#tax-info">Tax info</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="head-cta">
+      <a class="btn btn-primary" href="tel:+19549649220">Call (954) 964-9220</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="wrap">
+    <div>
+      <span class="kicker hero-fade">Fort Lauderdale, Florida, since 1991</span>
+      <h1 id="hero-h">
+        <span class="ln"><span>Your <span class="word-slot" aria-hidden="true">
+          <span class="on" lang="en">accountant</span>
+          <span lang="es">contador</span>
+          <span lang="he" dir="rtl">רואה חשבון</span>
+          <span lang="fr">comptable</span>
+          <span lang="yi" dir="rtl">חשבון־פֿירער</span>
+        </span><span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">accountant</span>,</span></span>
+        <span class="ln"><span>with personal</span></span>
+        <span class="ln"><span>attention.</span></span>
+      </h1>
+      <p class="lang-key hero-fade" id="langkey" aria-hidden="true">English</p>
+      <p class="lede hero-fade">We take advantage of the small firm mentality and approach to give each client individualized service. Through our partnerships, we have the capabilities of the “Big Four”.</p>
+      <div class="ctas hero-fade">
+        <a class="btn btn-primary" href="tel:+19549649220">Call (954) 964-9220</a>
+        <a class="btn btn-ghost" href="mailto:david@cg-accounting.com">Email David</a>
+      </div>
+      <div class="mini hero-fade">
+        <a class="btn btn-sm" href="https://sa.www4.irs.gov/irfof/lang/en/irfofgetstatus.jsp" target="_blank" rel="noopener">Check your federal refund</a>
+        <a class="btn btn-sm" href="#tax-info">Tax forms &amp; links</a>
+      </div>
+    </div>
+    <figure class="arch">
+      <div class="kb"><span>[Office or team photo]</span></div>
+      <figcaption><b>One Emerald Place</b>Emerald Lake Corporate Park, just east of the Broward County Library</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="strip" aria-label="Highlights">
+  <div class="track">
+    <ul><li>Established 1991</li><li>Audit representation at Federal, State, County and City levels</li><li>Federal, State and local taxes</li><li>QuickBooks setup and training</li><li>Incorporations in any state</li><li>Notary</li><li>Serving the U.S., Israel, Europe and Latin America</li></ul>
+    <ul aria-hidden="true"><li>Established 1991</li><li>Audit representation at Federal, State, County and City levels</li><li>Federal, State and local taxes</li><li>QuickBooks setup and training</li><li>Incorporations in any state</li><li>Notary</li><li>Serving the U.S., Israel, Europe and Latin America</li></ul>
+  </div>
+</div>
+
+<!-- WELCOME -->
+<section class="welcome" id="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <div class="circle"><span>[Photo of David Goldis or the office]</span></div>
+    <div>
+      <span class="kicker">Welcome</span>
+      <h2 id="about-h">Quality professional service, with personal attention for every client.</h2>
+      <p class="lede" style="margin-top:1.4rem">Established in 1991, CG Accounting is dedicated to the highest quality professional service and guidance, with personal attention given to all clients.</p>
+      <p>We combine technical knowledge, many years of experience, and an understanding of current issues and regulatory matters. As a multicultural and multilingual firm, from our office in Fort Lauderdale we serve clients throughout the United States, Israel, Europe, and Latin America.</p>
+      <p>We are committed to helping our clients with insightful advice, always available for quick responses, with the highest standard of excellence and professionalism.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true"><svg viewBox="0 0 460 14"><path class="draw" d="M2 4 H458"/><path class="draw" d="M2 10 H458"/></svg></div>
+
+<!-- STORY -->
+<section class="story" id="story" aria-labelledby="story-h">
+  <div class="wrap intro">
+    <span class="kicker">Our story</span>
+    <h2 id="story-h">From Wall Street to Fort Lauderdale.</h2>
+  </div>
+  <div class="wrap">
+    <div class="tl">
+      <article class="stop"><div class="when">Early years</div><h3>Philadelphia, Israel, New York</h3><p>David Goldis, third generation, was born in Philadelphia. His family moved to Israel for his first year of elementary school, and he was then brought up in Far Rockaway, NY, where he completed high school.</p></article>
+      <article class="stop"><div class="when">Jerusalem</div><h3>First year of university abroad</h3><p>His first year of university studies was on the Yeshiva University campus in Jerusalem, Israel.</p></article>
+      <article class="stop"><div class="when">1987</div><h3>B.S. in Accounting</h3><p>He returned to New York and earned his Bachelor of Science in Accounting from Yeshiva University in January 1987.</p></article>
+      <article class="stop"><div class="when">New York City</div><h3>Spicer &amp; Oppenheim</h3><p>His professional life started at Spicer &amp; Oppenheim, a well-known Wall Street firm that specialized in accounting for brokerage firms such as Bear Stearns.</p></article>
+      <article class="stop"><div class="when">The “Big Eight”</div><h3>Peat Marwick and Coopers &amp; Lybrand</h3><p>He went on to work for two of the “Big Eight” firms: Peat Marwick, at the time the #1 accounting firm in the world, and Coopers &amp; Lybrand.</p></article>
+      <article class="stop"><div class="when">1991</div><h3>CG Accounting Corp. opens</h3><p>David opened his own firm, CG Accounting Corp., now located in Fort Lauderdale, Florida.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" aria-labelledby="svc-h">
+  <div class="wrap">
+    <span class="kicker">Services</span>
+    <h2 id="svc-h">Tax and accounting for people and businesses.</h2>
+    <div class="toggle" role="tablist" aria-label="Service group">
+      <span class="pill" aria-hidden="true"></span>
+      <button role="tab" id="t-ind" aria-selected="true" aria-controls="p-ind">For individuals</button>
+      <button role="tab" id="t-biz" aria-selected="false" aria-controls="p-biz" tabindex="-1">For business</button>
+    </div>
+    <div class="pane" id="p-ind" role="tabpanel" aria-labelledby="t-ind">
+      <div class="svc-grid">
+        <article class="svc"><h3>Federal and all States tax preparation</h3></article>
+        <article class="svc"><h3>Tax planning</h3></article>
+        <article class="svc"><h3>Projections</h3></article>
+      </div>
+    </div>
+    <div class="pane" id="p-biz" role="tabpanel" aria-labelledby="t-biz" hidden>
+      <div class="svc-grid">
+        <article class="svc"><h3>Federal and all States tax preparation</h3></article>
+        <article class="svc"><h3>Audits, reviews, compilations</h3><p>Some work referred to partner firms.</p></article>
+        <article class="svc"><h3>Small business accounting</h3></article>
+        <article class="svc"><h3>Strategic business planning</h3></article>
+        <article class="svc"><h3>New business formation</h3></article>
+        <article class="svc"><h3>Incorporations in any state</h3></article>
+        <article class="svc"><h3>Non-profit organizations</h3></article>
+      </div>
+    </div>
+
+    <h3 class="more-h">Also available</h3>
+    <div class="svc-grid">
+      <article class="svc more"><h3>Audit representation</h3><p>At the Federal, State, County and City levels.</p></article>
+      <article class="svc more"><h3>QuickBooks</h3><p>Setup and training.</p></article>
+      <article class="svc more"><h3>Notary</h3></article>
+      <article class="svc more"><h3>Business consulting</h3></article>
+      <article class="svc more"><h3>Litigation support</h3><p>Including divorce litigation support.</p></article>
+      <article class="svc more"><h3>Real estate and construction accounting</h3></article>
+      <article class="svc more"><h3>Government accounting and consulting</h3><p>Federal, State and local.</p></article>
+      <article class="svc more"><h3>Financial consulting</h3><p>Business planning, business evaluation and management services.</p></article>
+    </div>
+    <p class="network">Through our vast referral network, we partner with attorneys, CFPs, insurance brokers, bankers, credit card processors, payroll service providers, and more.</p>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section style="padding-top:0" aria-labelledby="ph-h">
+  <div class="wrap">
+    <span class="kicker">Our philosophy</span>
+    <h2 id="ph-h">The perfect product, at a fair price.</h2>
+    <div class="philo">
+      <div><h3>Small firm approach</h3><p>We take advantage of the small firm mentality and approach to provide each client with individualized service.</p></div>
+      <div><h3>You keep costs down</h3><p>We encourage our customers to do as much work as possible, to minimize their costs.</p></div>
+      <div><h3>Big Four capabilities</h3><p>Through its various partnerships, CG Accounting has the capabilities of the “Big Four”.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LANGUAGES -->
+<section style="padding-top:0" aria-labelledby="lang-h">
+  <div class="wrap">
+    <div class="langs">
+      <h2 id="lang-h">Languages spoken in the office</h2>
+      <ul>
+        <li><b lang="en">Accountant</b><span>English</span></li>
+        <li><b lang="he" dir="rtl">רואה חשבון</b><span>Hebrew</span></li>
+        <li><b lang="es">Contador</b><span>Spanish</span></li>
+        <li><b lang="fr">Comptable</b><span>French</span></li>
+        <li><b lang="yi" dir="rtl">חשבון־פֿירער</b><span>Yiddish</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team" aria-labelledby="team-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="David Goldis. Select to show bio.">
+      <div class="inner">
+        <div class="face front">
+          <div class="portrait">[Photo of David Goldis]</div>
+          <h3>David Goldis</h3>
+          <span class="role">Public Accountant for 30+ years</span>
+          <span class="hint">Select for bio</span>
+        </div>
+        <div class="face back">
+          <h3>David Goldis</h3>
+          <p style="margin-top:.8rem">Many years of extensive experience in tax services and consulting, audit representation and financial consulting, including business planning, business evaluation, divorce litigation support and management services.</p>
+          <p>He combines his professional practice with public service and charity work, and is heavily involved in many non-profit, religious and sports organizations in his community.</p>
+          <p>Fluent in English, Hebrew and Yiddish.</p>
+        </div>
+      </div>
+    </div>
+    <div class="bio-cols">
+      <span class="kicker">Meet David</span>
+      <h2 id="team-h">Three decades of public accounting.</h2>
+      <p class="lede" style="margin-top:1.2rem">B.S. in Accounting, Yeshiva University. Experience at Spicer &amp; Oppenheim, Peat Marwick and Coopers &amp; Lybrand before founding CG Accounting in 1991.</p>
+      <h3>Industries</h3>
+      <div class="tags">
+        <span>Small business owners</span><span>Real estate sales and development</span><span>Mortgage lenders and brokers</span><span>Professional and medical practices</span><span>Retailers</span><span>Consultants</span><span>Personal services providers</span><span>Sports</span><span>Non-profit organizations</span>
+      </div>
+      <h3>Community affiliations</h3>
+      <ul class="aff">
+        <li>Founder and commissioner, City of Hollywood Sunday Baseball League</li>
+        <li>Gabbai, ritual committee, and former board member, Young Israel of Hollywood</li>
+        <li>Founding member, Bikur Cholim of Hollywood</li>
+        <li>Founder and Treasurer, A Hand For Israel Corp.</li>
+        <li>Board member, Toras Emes Academy of Miami</li>
+        <li>Founder and head gabbai, Bais Medrash Miami Marlins</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section aria-labelledby="rev-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="reviews-head">
+      <div><span class="kicker">Client words</span><h2 id="rev-h">What clients say</h2></div>
+      <div class="car-nav"><button aria-label="Previous review" data-dir="-1">&#8592;</button><button aria-label="Next review" data-dir="1">&#8594;</button></div>
+    </div>
+    <div class="carousel" tabindex="0" aria-label="Client reviews">
+      <figure class="review"><p class="ph">[Client review]</p><figcaption class="ph">[Client name]</figcaption></figure>
+      <figure class="review"><p class="ph">[Client review]</p><figcaption class="ph">[Client name]</figcaption></figure>
+      <figure class="review"><p class="ph">[Client review]</p><figcaption class="ph">[Client name]</figcaption></figure>
+      <figure class="review"><p class="ph">[Client review]</p><figcaption class="ph">[Client name]</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" aria-labelledby="why-h" style="padding-top:0">
+  <div class="wrap">
+    <div><span class="kicker">Why CG Accounting</span><h2 id="why-h">What you can count on.</h2></div>
+    <ul class="checks" id="checks"></ul>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true"><svg viewBox="0 0 460 14"><path class="draw" d="M2 4 H458"/><path class="draw" d="M2 10 H458"/></svg></div>
+
+<!-- TAX INFO -->
+<section id="tax-info" aria-labelledby="tax-h">
+  <div class="wrap">
+    <span class="kicker">Tax info</span>
+    <h2 id="tax-h">Most used links and forms.</h2>
+    <div class="filters" role="group" aria-label="Filter links">
+      <button class="chip" data-f="all" aria-pressed="true">All</button>
+      <button class="chip" data-f="irs" aria-pressed="false">IRS</button>
+      <button class="chip" data-f="forms" aria-pressed="false">Forms</button>
+      <button class="chip" data-f="state" aria-pressed="false">State &amp; Florida</button>
+      <button class="chip" data-f="other" aria-pressed="false">Other</button>
+    </div>
+    <div class="res-grid" id="resgrid"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq" aria-labelledby="faq-h" style="padding-top:0">
+  <div class="wrap">
+    <span class="kicker">Questions</span>
+    <h2 id="faq-h">Frequently asked</h2>
+    <div class="acc" id="acc"></div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="wrap">
+  <div class="band">
+    <h2>Personal attention, in your language.</h2>
+    <a class="btn btn-sun" href="tel:+19549649220">Call (954) 964-9220</a>
+    <p><a href="mailto:david@cg-accounting.com">david@cg-accounting.com</a></p>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact" aria-labelledby="ct-h">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Contact us</span>
+      <h2 id="ct-h">Visit or get in touch.</h2>
+      <dl>
+        <dt>CG Accounting Corporation</dt><dd>3113 Stirling Rd. Suite 102<br>Fort Lauderdale, FL 33312</dd>
+        <dt>Telephone</dt><dd><a href="tel:+19549649220">(954) 964-9220</a></dd>
+        <dt>Fax</dt><dd>(954) 964-9224</dd>
+        <dt>Email</dt><dd><a href="mailto:david@cg-accounting.com">david@cg-accounting.com</a></dd>
+      </dl>
+      <div class="directions">
+        <div><b>Coming from I-95</b>Head west on Stirling Road for 1.4 miles, then turn right into Emerald Lake Corporate Park.</div>
+        <div><b>Coming from State Road 7 (441)</b>Head east on Stirling Road for 2.2 miles, then turn left into Emerald Lake Corporate Park.</div>
+        <div><b>Finding the building</b>A two-story white office building with black awnings called “One Emerald Place”, just east of the Broward County Library.</div>
+      </div>
+      <p style="margin-top:1.4rem"><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=3113+Stirling+Rd+Suite+102+Fort+Lauderdale+FL+33312" target="_blank" rel="noopener">Open in Google Maps</a></p>
+    </div>
+    <form id="cform" novalidate>
+      <div><label for="f-name">Name *</label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div><label for="f-email">Email *</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="full"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+      <div class="full">
+        <span class="lbl" id="lg-lbl">Preferred language</span>
+        <div class="chips" role="radiogroup" aria-labelledby="lg-lbl" data-group="lang">
+          <button type="button" class="chip" role="radio" aria-checked="true">English</button>
+          <button type="button" class="chip" role="radio" aria-checked="false">Hebrew</button>
+          <button type="button" class="chip" role="radio" aria-checked="false">Spanish</button>
+          <button type="button" class="chip" role="radio" aria-checked="false">French</button>
+          <button type="button" class="chip" role="radio" aria-checked="false">Yiddish</button>
+        </div>
+      </div>
+      <div class="full">
+        <span class="lbl" id="hp-lbl">I need help with</span>
+        <div class="chips" role="radiogroup" aria-labelledby="hp-lbl" data-group="need">
+          <button type="button" class="chip" role="radio" aria-checked="false">Personal taxes</button>
+          <button type="button" class="chip" role="radio" aria-checked="false">Business taxes</button>
+          <button type="button" class="chip" role="radio" aria-checked="false">Audit representation</button>
+          <button type="button" class="chip" role="radio" aria-checked="false">QuickBooks</button>
+          <button type="button" class="chip" role="radio" aria-checked="false">New business</button>
+          <button type="button" class="chip" role="radio" aria-checked="false">Other</button>
+        </div>
+      </div>
+      <div class="full"><label for="f-msg">Message *</label><textarea id="f-msg" name="message" required></textarea></div>
+      <div class="full"><button class="btn btn-primary" type="submit">Send message</button></div>
+      <p class="form-msg" id="fmsg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="#top"><span class="mono" aria-hidden="true">CG</span><span><b>CG Accounting</b><small>Corporation • Since 1991</small></span></a>
+        <p style="margin-top:1.2rem;opacity:.8;font-size:.95rem">Serving clients throughout the United States, Israel, Europe, and Latin America.</p>
+      </div>
+      <div><h3>Explore</h3><ul><li><a href="#about">About us</a></li><li><a href="#services">Services</a></li><li><a href="#team">David Goldis</a></li><li><a href="#tax-info">Tax info</a></li><li><a href="#contact">Contact us</a></li></ul></div>
+      <div><h3>Contact</h3><ul><li>3113 Stirling Rd. Suite 102<br>Fort Lauderdale, FL 33312</li><li><a href="tel:+19549649220">Tel (954) 964-9220</a></li><li>Fax (954) 964-9224</li><li><a href="mailto:david@cg-accounting.com">david@cg-accounting.com</a></li></ul></div>
+      <div><h3>Policies</h3><ul><li><a href="#">[Privacy policy]</a></li><li><a href="#">[Accessibility statement]</a></li></ul></div>
+    </div>
+    <div class="base"><span>© CG Accounting Corporation <span id="yr"></span></span><span>Fort Lauderdale, Florida</span></div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasGsap = typeof window.gsap !== 'undefined';
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* ---------- Rotating "accountant" in five languages ---------- */
+  var words = document.querySelectorAll('.word-slot span'), key = document.getElementById('langkey');
+  var names = ['English','Spanish','Hebrew','French','Yiddish'], wi = 0;
+  if(!reduce){
+    setInterval(function(){
+      words[wi].classList.remove('on'); wi=(wi+1)%words.length; words[wi].classList.add('on'); key.textContent=names[wi];
+    },2400);
+  }
+
+  /* ---------- Why checklist ---------- */
+  ['Established in 1991','Personal attention given to all clients','“Big Four” capabilities through our partnerships','Audit representation at Federal, State, County and City levels','Federal, all States and local taxes','QuickBooks setup and training','English, Hebrew, Spanish, French and Yiddish spoken','Clients across the U.S., Israel, Europe and Latin America','A referral network of attorneys, CFPs, insurance brokers, bankers and more'].forEach(function(t){
+    var li=document.createElement('li');
+    li.innerHTML='<svg viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="13"/><path d="M8 13.5 L11.5 17 L18.5 9.5"/></svg>'+t;
+    document.getElementById('checks').appendChild(li);
+  });
+
+  /* ---------- Tax info links (from the original site) ---------- */
+  var RES = [
+    ['irs','Federal refund status','https://sa.www4.irs.gov/irfof/lang/en/irfofgetstatus.jsp','Link'],
+    ['irs','IRS main page','http://www.irs.gov','Link'],
+    ['forms','Form 1040','http://www.irs.gov/file_source/pub/irs-pdf/f1040.pdf','PDF'],
+    ['forms','Form W-4','http://www.irs.gov/file_source/pub/irs-pdf/fw4.pdf','PDF'],
+    ['forms','Form I-9','http://www.uscis.gov/sites/default/files/files/form/i-9.pdf','PDF'],
+    ['state','State tax websites','http://www.taxadmin.org/fta/link/default.php?lnk=2','Link'],
+    ['state','Florida sales tax registration','http://dor.myflorida.com/dor/forms/current/dr1.pdf','PDF'],
+    ['other','Tax rates','http://cg-accounting.com/pdf/2014_Tax_Rates_Reviewed_04-07-14.pdf','PDF'],
+    ['other','Social Security Administration','http://www.ssa.gov/','Link']
+  ];
+  var CAT={irs:'IRS',forms:'Form',state:'State & Florida',other:'Other'};
+  var grid=document.getElementById('resgrid');
+  RES.forEach(function(r){
+    var a=document.createElement('a'); a.className='res'; a.href=r[2]; a.target='_blank'; a.rel='noopener'; a.dataset.cat=r[0];
+    a.innerHTML='<span class="cat">'+CAT[r[0]]+'</span><h3>'+r[1]+'</h3><span class="go">'+(r[3]==='PDF'?'PDF, opens in a new tab':'Opens in a new tab')+'</span>';
+    grid.appendChild(a);
+  });
+  document.querySelectorAll('.filters .chip').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.filters .chip').forEach(function(x){x.setAttribute('aria-pressed','false')});
+      b.setAttribute('aria-pressed','true');
+      grid.querySelectorAll('.res').forEach(function(el){el.hidden=!(b.dataset.f==='all'||el.dataset.cat===b.dataset.f)});
+      if(window.ScrollTrigger) ScrollTrigger.refresh();
+    });
+  });
+
+  /* ---------- FAQ (answers from the original site) ---------- */
+  var FAQ=[
+    ['Where are you located?','3113 Stirling Rd. Suite 102, Fort Lauderdale, FL 33312, in “One Emerald Place”, a two-story white office building with black awnings in Emerald Lake Corporate Park, just east of the Broward County Library.'],
+    ['Which languages are spoken in the office?','English, Hebrew, Spanish, French and Yiddish.'],
+    ['Do you work with clients outside Florida?','Yes. As a multicultural and multilingual firm, we serve clients throughout the United States, Israel, Europe, and Latin America.'],
+    ['Can you represent me in an audit?','Yes. We provide representation at audits at the Federal, State, County and City levels.'],
+    ['Can you help me start a business?','Yes. We offer new business formation, incorporations in any state, small business accounting, strategic business planning, and QuickBooks setup and training.'],
+    ['How do you keep fees fair?','Our goal is to achieve the perfect product at a fair price. We encourage our customers to do as much work as possible to minimize their costs.'],
+    ['What if I need an attorney, financial planner or payroll provider?','Through our referral network, we partner with attorneys, CFPs, insurance brokers, bankers, credit card processors, payroll service providers, and more.'],
+    ['How do I reach you?','Call <a href="tel:+19549649220">(954) 964-9220</a>, fax (954) 964-9224, or email <a href="mailto:david@cg-accounting.com">david@cg-accounting.com</a>.']
+  ];
+  var acc=document.getElementById('acc');
+  FAQ.forEach(function(q,i){
+    var d=document.createElement('div'); d.className='acc-item';
+    d.innerHTML='<h3><button class="acc-btn" aria-expanded="false" aria-controls="ap'+i+'" id="ab'+i+'"><span>'+q[0]+'</span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="ap'+i+'" role="region" aria-labelledby="ab'+i+'"><div><p>'+q[1]+'</p></div></div>';
+    acc.appendChild(d);
+  });
+  acc.addEventListener('click',function(e){
+    var b=e.target.closest('.acc-btn'); if(!b) return;
+    var p=document.getElementById(b.getAttribute('aria-controls')), open=b.getAttribute('aria-expanded')==='true';
+    b.setAttribute('aria-expanded',String(!open)); p.style.height=open?'0px':p.scrollHeight+'px';
+    setTimeout(function(){if(window.ScrollTrigger) ScrollTrigger.refresh()},380);
+  });
+
+  /* ---------- Menu ---------- */
+  var mb=document.querySelector('.menu-btn'), nav=document.getElementById('mainnav');
+  mb.addEventListener('click',function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',String(o))});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');mb.setAttribute('aria-expanded','false')}});
+
+  /* ---------- Services toggle ---------- */
+  var tabs=[document.getElementById('t-ind'),document.getElementById('t-biz')], pill=document.querySelector('.toggle .pill');
+  function placePill(t){pill.style.width=t.offsetWidth+'px';pill.style.transform='translateX('+(t.offsetLeft-5)+'px)'}
+  function selectTab(t){
+    tabs.forEach(function(x){
+      var on=x===t, pane=document.getElementById(x.getAttribute('aria-controls'));
+      x.setAttribute('aria-selected',String(on)); x.tabIndex=on?0:-1; pane.hidden=!on;
+      if(on&&hasGsap&&!reduce) gsap.fromTo(pane.querySelectorAll('.svc'),{opacity:0,y:16,scale:.97},{opacity:1,y:0,scale:1,duration:.45,stagger:.05,ease:'power2.out'});
+    });
+    placePill(t); if(window.ScrollTrigger) ScrollTrigger.refresh();
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){selectTab(t)});
+    t.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();var n=tabs[(i+1)%2];n.focus();selectTab(n)}});
+  });
+  placePill(tabs[0]);
+  window.addEventListener('resize',function(){placePill(document.querySelector('.toggle [aria-selected="true"]'))});
+
+  /* ---------- Flip card ---------- */
+  document.querySelectorAll('.flip').forEach(function(card){
+    var inner=card.querySelector('.inner');
+    function flip(){var on=card.classList.toggle('on');card.setAttribute('aria-pressed',String(on));inner.style.transform=''}
+    card.addEventListener('click',flip);
+    card.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();flip()}});
+    if(!reduce&&window.matchMedia('(hover:hover) and (min-width:861px)').matches){
+      card.addEventListener('mousemove',function(e){
+        if(card.classList.contains('on')) return;
+        var r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+        inner.style.transform='rotateX('+(-y*6)+'deg) rotateY('+(x*8)+'deg)';
+      });
+      card.addEventListener('mouseleave',function(){inner.style.transform=''});
+    }
+  });
+
+  /* ---------- Reviews ---------- */
+  var car=document.querySelector('.carousel');
+  document.querySelectorAll('.car-nav button').forEach(function(b){
+    b.addEventListener('click',function(){car.scrollBy({left:(+b.dataset.dir)*car.clientWidth*.8,behavior:reduce?'auto':'smooth'})});
+  });
+
+  /* ---------- Contact form (opens an email to David) ---------- */
+  document.querySelectorAll('.chips[data-group]').forEach(function(g){
+    g.addEventListener('click',function(e){
+      var c=e.target.closest('.chip'); if(!c) return;
+      g.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-checked','false')}); c.setAttribute('aria-checked','true');
+    });
+  });
+  document.getElementById('cform').addEventListener('submit',function(e){
+    e.preventDefault();
+    var f=e.target,msg=document.getElementById('fmsg'),name=f.name.value.trim(),email=f.email.value.trim(),m=f.message.value.trim();
+    if(!name||!email||!m){msg.textContent='Add your name, email and a message, then send again.';return}
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){msg.textContent='Check your email address. It should look like name@example.com.';return}
+    var pick=function(g){var c=document.querySelector('[data-group="'+g+'"] [aria-checked="true"]');return c?c.textContent:'Not specified'};
+    var body='Name: '+name+'\nEmail: '+email+'\nPhone: '+f.phone.value+'\nPreferred language: '+pick('lang')+'\nNeeds help with: '+pick('need')+'\n\n'+m;
+    window.location.href='mailto:david@cg-accounting.com?subject='+encodeURIComponent('Website inquiry from '+name)+'&body='+encodeURIComponent(body);
+    msg.textContent='Your email app is opening with your message to david@cg-accounting.com.';
+  });
+
+  /* ---------- Loader (once per session) ---------- */
+  var seen=false;
+  try{seen=sessionStorage.getItem('cg_loader')==='1';sessionStorage.setItem('cg_loader','1')}catch(err){}
+  var loader=document.getElementById('loader');
+  function heroIntro(){
+    if(!hasGsap||reduce) return;
+    gsap.from('.hero h1 .ln > span',{yPercent:110,duration:.9,stagger:.1,ease:'power3.out'});
+    gsap.from('.hero-fade',{opacity:0,y:16,duration:.8,stagger:.08,delay:.25,ease:'power2.out'});
+    gsap.from('.arch',{opacity:0,scale:.96,duration:1.1,ease:'power2.out'});
+  }
+  if(seen){document.documentElement.classList.add('no-loader');heroIntro()}
+  else if(reduce||!hasGsap){
+    loader.style.transition='opacity .3s';
+    loader.querySelector('.cg').style.opacity=1;loader.querySelector('.tag').style.opacity=1;loader.querySelector('.ring').style.strokeDashoffset=0;
+    setTimeout(function(){loader.style.opacity=0;setTimeout(function(){loader.remove()},320)},300);
+  } else {
+    var tl=gsap.timeline({onComplete:function(){loader.remove()}});
+    tl.to('#loader .ring',{strokeDashoffset:0,duration:.7,ease:'power2.inOut'})
+      .to('#loader .cg',{opacity:1,duration:.35},'-=.2')
+      .to('#loader .ticks span',{opacity:1,duration:.12,stagger:.12},'-=.25')
+      .to('#loader .tag',{opacity:1,duration:.35},'-=.4')
+      .to('#loader > div',{y:-60,opacity:0,duration:.45,ease:'power2.in'},'+=.1')
+      .to(loader,{yPercent:-100,duration:.65,ease:'power3.inOut'},'-=.2')
+      .add(heroIntro,'-=.4');
+  }
+
+  /* ---------- Smooth scroll & scroll motion ---------- */
+  if(!hasGsap||typeof window.ScrollTrigger==='undefined') return;
+  gsap.registerPlugin(ScrollTrigger);
+  if(!reduce&&typeof window.Lenis!=='undefined'){
+    var lenis=new Lenis({duration:1.15,smoothWheel:true});
+    lenis.on('scroll',ScrollTrigger.update);
+    gsap.ticker.add(function(t){lenis.raf(t*1000)}); gsap.ticker.lagSmoothing(0);
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length<2)return;var el=document.querySelector(id);if(!el)return;e.preventDefault();lenis.scrollTo(el,{offset:-80})});
+    });
+  }
+  if(reduce) return;
+
+  gsap.to('.arch .kb',{scale:1.1,duration:20,ease:'none',repeat:-1,yoyo:true});
+
+  document.querySelectorAll('.divider .draw').forEach(function(p,i){
+    var len=p.getTotalLength(); p.style.strokeDasharray=len; p.style.strokeDashoffset=len;
+    gsap.to(p,{strokeDashoffset:0,duration:1.2,delay:(i%2)*.25,ease:'power2.out',scrollTrigger:{trigger:p.closest('.divider'),start:'top 85%'}});
+  });
+
+  var mm=gsap.matchMedia();
+  mm.add('(min-width: 861px)',function(){
+    var track=document.querySelector('.tl');
+    var dist=function(){return Math.max(0,track.scrollWidth-document.querySelector('.story .wrap').clientWidth+40)};
+    gsap.to(track,{x:function(){return -dist()},ease:'none',scrollTrigger:{trigger:'.story',start:'top top',end:function(){return '+='+dist()},pin:true,scrub:1,invalidateOnRefresh:true}});
+  });
+  mm.add('(max-width: 860px)',function(){
+    var s=document.querySelector('.story'); s.classList.add('static-tl');
+    gsap.utils.toArray('.stop').forEach(function(p){gsap.from(p,{opacity:0,y:24,duration:.6,scrollTrigger:{trigger:p,start:'top 88%'}})});
+    return function(){s.classList.remove('static-tl')};
+  });
+})();
+</script>
+</body>
+</html>
